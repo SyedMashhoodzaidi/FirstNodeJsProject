@@ -120,3 +120,74 @@
       font-size: 1.2em;
       cursor: pointer;
     }
+
+
+
+    /*::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+    .button-body{
+      font-family: 'Lato', sans-serif;
+    }
+    
+    .btnwrapper{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .btnlink_wrapper{
+      position: relative;
+    }
+    
+    .btna{
+      display: block;
+      width: 250px;
+      height: 50px;
+      line-height: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      background: #333;
+      text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 3px solid #333;
+      transition: all .35s;
+    }
+    
+    .btnicon{
+      width: 50px;
+      height: 50px;
+      border: 3px solid transparent;
+      position: absolute;
+      transform: rotate(45deg);
+      right: 0;
+      top: 0;
+      z-index: -1;
+      transition: all .35s;
+    }
+    
+    .btnicon svg{
+      width: 30px;
+      position: absolute;
+      top: calc(50% - 15px);
+      left: calc(50% - 15px);
+      transform: rotate(-45deg);
+      fill: #2ecc71;
+      transition: all .35s;
+    }
+    
+    .btna:hover{
+      width: 200px;
+      border: 3px solid #2ecc71;
+      background: transparent;
+      color: #2ecc71;
+    }
+    
+    .btna:hover + .icon{
+      border: 3px solid #2ecc71;
+      right: -25%;
+    }
+    /*:::::::::::::::::::::::::::::::::::::::: 404 Page Not Found ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+    
