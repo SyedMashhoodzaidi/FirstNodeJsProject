@@ -8,7 +8,7 @@ const app= express();
 const dbURI='mongodb+srv://Mashhood:Mashhood@cluster0.bsurkl9.mongodb.net/BlogPostTestSite?retryWrites=true&w=majority';
 mng.set({strictQuery:true}); // to avoid depcrication warnings
 
-
+const port=process.env.PORT || 3000;
 // using static middleware for Folders for css and images
 app.use(express.static('./views/PublicFolder'))
 
@@ -28,7 +28,7 @@ mng.connect(dbURI)
 .then((result)=>{
 
     //:::::::::::::::::::::::::::::::::Listening ::::::::::::::::::::::
-    app.listen(3000);
+    app.listen(port);
     console.log("Connected: ");
 })
 .catch((err)=>console.log(err));
