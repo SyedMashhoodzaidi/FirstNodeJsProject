@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/nav.ejs") %>
+
+    <div class ="blogs Content">
+      <h2>All Blogs</h2>
+          <% if (blogArray.length > 0) {
+               blogArray.forEach(i =>{ %>
+                <a class="single" href="/blogs/<%= i._id %>">
+                  <h3 class="tile"><%= i.title %></h3>
+                  <p class="snippet"><%= i.snippet %></p>
+                 </a>
+              <%  })} else {%>
+                  <p>There is no Blog available on the website</p>
+              <% }%>
+      </div>
+    
+    
+    
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>
